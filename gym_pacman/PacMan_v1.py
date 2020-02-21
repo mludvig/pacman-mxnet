@@ -137,7 +137,8 @@ class PacMan_v1(gym.Env):
 
         # Reset rendering viewer
         if self._viewer is not None:
-            self._build_board()
+            self._viewer.close()
+            self._viewer = None
 
         # Count some stats
         self._episode += 1
